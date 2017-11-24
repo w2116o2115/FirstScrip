@@ -17,7 +17,7 @@ class LoginCase(unittest.TestCase):
 
     # 定义登录方法
     def login(self, username, password):
-        self.dr.get('https://mail.qq.com/cgi-bin/loginpage')  # cnblog登录页面
+        self.dr.get('https://mail.qq.com/cgi-bin/loginpage')  # 登录页面
         self.dr.switch_to.frame("login_frame")
         elem_click = self.dr.find_element_by_id("switcher_plogin")
         elem_click.click()
