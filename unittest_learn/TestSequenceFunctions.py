@@ -74,8 +74,8 @@ class TestDictValueFormatFunctions(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # unittest.main() # 用这个是最简单的，下面的用法可以同时测试多个类
-    # unittest.TextTestRunner(verbosity=2).run(suite1) # 这个等价于上述但可设置verbosity=2，省去了运行时加-v
+    # unittest_learn.main() # 用这个是最简单的，下面的用法可以同时测试多个类
+    # unittest_learn.TextTestRunner(verbosity=2).run(suite1) # 这个等价于上述但可设置verbosity=2，省去了运行时加-v
     suite1 = unittest.TestLoader().loadTestsFromTestCase(TestSequenceFunctions)
     suite2 = unittest.TestLoader().loadTestsFromTestCase(TestDictValueFormatFunctions)
     suite = unittest.TestSuite([suite1, suite2])

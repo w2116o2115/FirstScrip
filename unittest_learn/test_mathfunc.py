@@ -41,7 +41,7 @@ class TestMathFunc(unittest.TestCase):
         self.assertEqual(2.5, divide(5, 2))
 
 if __name__ == '__main__':
-    # unittest.main() # 用这个是最简单的，下面的用法可以同时测试多个类
+    # unittest_learn.main() # 用这个是最简单的，下面的用法可以同时测试多个类
     suite = unittest.TestLoader().loadTestsFromTestCase(TestMathFunc)
     """
     在unittest.main()中加 verbosity 参数可以控制输出的错误报告的详细程度，
