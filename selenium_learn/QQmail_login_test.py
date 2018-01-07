@@ -33,7 +33,7 @@ class LoginCase(unittest.TestCase):
         sleep(3)
         link = self.dr.find_element_by_id('useralias')
         self.assertTrue(u'张伟' in link.text)  # 用assertTrue(x)方法来断言  bool(x) is True 登录成功后用户昵称在lnk_current_user里
-        self.dr.get_screenshot_as_file("D:\cnblogtest\login_success.jpg")  # 截图  可自定义截图后的保存位置和图片命名
+        self.dr.get_screenshot_as_file("/Users/lijun/Downloads/login_success.jpg")  # 截图  可自定义截图后的保存位置和图片命名
 
     def test_login_pwd_error(self):
         '''用户名正确、密码不正确'''
@@ -41,14 +41,14 @@ class LoginCase(unittest.TestCase):
         sleep(2)
         error_message = self.dr.find_element_by_id('err_m').text
         self.assertIn(u'你输入的帐号或密码不正确，请重新输入。', error_message)  # 用assertIn(a,b)方法来断言 a in b  '用户名或密码错误'在error_message里
-        self.dr.get_screenshot_as_file("D:\cnblogtest\login_pwd_error.jpg")
+        self.dr.get_screenshot_as_file("/Users/lijun/Downloads/login_pwd_error.jpg")
 
     def test_login_pwd_null(self):
         '''用户名正确、密码为空'''
         self.login('252160922@qq.com', '')  # 密码为空
         error_message = self.dr.find_element_by_id('err_m').text
         self.assertEqual(error_message, u'你还没有输入密码！')  # 用assertEqual(a,b)方法来断言  a == b  请输入密码等于error_message
-        self.dr.get_screenshot_as_file("D:\cnblogtest\login_pwd_null.jpg")
+        self.dr.get_screenshot_as_file("/Users/lijun/Downloads/login_pwd_null.jpg")
 
     def tearDown(self):
         sleep(2)
